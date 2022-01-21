@@ -3,7 +3,85 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 46px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.menu{
+  &__list{
+    display: flex;
+    font-size: 15px;
+    line-height: 12px;
+  }
+  &__list-item + .menu__list-item{
+    margin-left: 35px;
+  }
+  &__list-link{
+    color: #768a94;
+    transition: all .3s;
+    @extend %rubik-500;
+    &:hover{
+      color: $btn;
+      border-bottom: 1px solid $btn;
+    }
+  }  
+}
+
+.user-nav{
+  display: flex;
+  align-items: center;   
+}
+.user-nav__link-search{
+  padding: 17px;
+  background-color: #edf1f4;
+  border-radius: 50%;
+}
+.user-nav__shape{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    padding: 9px 40px;
+    background-color: $accent;
+    border-radius: 40px;
+  }
+   .shape__link{
+    position: relative;
+  }
+  .shape__line{
+    margin: 0 30px;
+    border-right: 1px solid #fde7d3;
+    height: 32px;
+  }
+  .shape__num{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: -8px;
+    right: -10px;
+    font-size: 10px;
+    color: $title;
+    background-color: #fff;
+    text-align: center;
+    line-height: 18px;
+    @extend %dmsans-400;
+  }
+  .user-nav__link-user{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: $btn;
+  }
+
+
+// $accent: #fcd7b6;
+// $default: #767473;
+// $title: #243f4d; 
+// $btn: #a3bbc8;
 
 
 @import 'media';
