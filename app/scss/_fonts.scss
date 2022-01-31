@@ -57,3 +57,13 @@
        url('../fonts/Poppins-Bold.woff') format('woff');
   font-display: swap;
 }
+
+@font-face{
+  font-family: 'Myriad-Pro';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Myriad-Pro'),
+       url('../fonts/Myriad-Pro.woff2') format('woff2'),
+       url('../fonts/Myriad-Pro.woff') format('woff');
+  font-display: swap;
+}
