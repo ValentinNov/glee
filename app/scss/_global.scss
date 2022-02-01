@@ -45,3 +45,33 @@ body{
     top: 27px;
   } 
 }
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  position: relative;  
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #727272;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;      
+      right: 7px;
+      top: 1px;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
+

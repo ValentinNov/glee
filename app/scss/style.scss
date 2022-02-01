@@ -241,6 +241,19 @@
   }
 }
 
+.top{
+  background-color: #edf1f4;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0 25px;
+  &__title{
+   @extend %myriadpro-400;
+   font-size: 36px;
+   line-height: 24px;
+   margin-bottom: 10px; 
+  }
+}
+
 .top-slider{
   background-image: url(../images/slider/slider-bg.png);
   background-repeat: no-repeat;
@@ -624,7 +637,7 @@
     color: #222933;
     font-size: 12px;
     line-height: 30px;
-    padding-left: 15px;
+    padding-left: 12px;
     position: relative;
     @extend %rubik-400;
     &::before{
@@ -667,6 +680,68 @@
   }
   &__item{
     margin-top: 170px;
+  }
+}
+.clients--modified{
+  .clients__links{
+    height: 250px;
+  }  
+  .clients__item{
+    margin-top: 0;
+  }
+}
+
+.modal{
+  padding-top: 115px;
+  max-width: 470px;
+  margin: 0 auto 115px;
+  font-size: 14px;
+    color: #436372;
+  &__label{
+    margin-bottom: 20px;
+    display: block;    
+  }
+  &__input{
+    border: 1px solid #f6f6f6;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0 15px;
+    height: 58px;
+  }
+  &__btn{
+    display: block;
+    @extend %rubik-500;
+    font-size: 18px;
+    background-color: $btn;
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  &__link-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 50px;
+  }
+  &__error{
+    font-size: 14px;
+    color: #436372;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__text{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__btn--create{
+    margin-top: 0;
+    background-color: #fff;
+    border: 1px solid $btn;
+    color: $default;
   }
 }
 
