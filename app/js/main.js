@@ -15,8 +15,8 @@ $(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    
-    
+    autoplay: true,
+    autoplaySpeed: 4000,    
   });
 
   $('.filter-price__input').ionRangeSlider({
@@ -80,14 +80,20 @@ $(function () {
   $('.btn-description').on('click', function () {
     $('.product-additionalinfo, .product-reviews').removeClass('product-tabs__item--active');
     $('.product-description').addClass('product-tabs__item--active');
+    $('.btn-description').addClass('product-tabs__btn--active');
+    $('.btn-additionalinfo, .btn-reviews').removeClass('product-tabs__btn--active');
   });
   $('.btn-additionalinfo').on('click', function () {
     $('.product-description, .product-reviews').removeClass('product-tabs__item--active');
     $('.product-additionalinfo').addClass('product-tabs__item--active');
+    $('.btn-additionalinfo').addClass('product-tabs__btn--active');
+    $('.btn-description, .btn-reviews').removeClass('product-tabs__btn--active');
   });
   $('.btn-reviews').on('click', function () {
     $('.product-description, .product-additionalinfo').removeClass('product-tabs__item--active');
     $('.product-reviews').addClass('product-tabs__item--active');
+    $('.btn-reviews').addClass('product-tabs__btn--active');
+    $('.btn-description, .btn-additionalinfo').removeClass('product-tabs__btn--active');
   });
 
 
