@@ -18,6 +18,11 @@ $btn: #a3bbc8;
   font-weight: 700;
 }
 
+%rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400{
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
@@ -28,7 +33,26 @@ $btn: #a3bbc8;
   font-weight: 500;
 }
 
+%rubik-700{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
+}
+
 %poppins-700{
   font-family: 'Poppins-Bold', sans-serif;
   font-weight: 700;
 }
+
+%myriadpro-400{
+  font-family: 'Myriad-Pro', sans-serif;
+  font-weight: 400;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);    
+  position: absolute;
+}
+

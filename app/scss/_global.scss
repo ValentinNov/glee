@@ -26,3 +26,98 @@ body{
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title{
+  font-size: 36px;
+  line-height: 54px;
+  @extend %dmsans-700;
+  color: #191919;
+}
+
+.btn{  
+  font-size: 15px;
+  line-height: 12px;
+  @extend %rubik-500;
+  position: relative;
+  &::after{
+    position: absolute;
+    right: 17px;
+    top: 27px;
+  } 
+}
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  position: relative;  
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #727272;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;      
+      right: 7px;
+      top: 1px;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0 15px;
+  font-size: 16px;
+  line-height: 1;
+  color: $default;
+  @extend %rubik-500;
+  &__link{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+  }    
+  &__next{
+    padding: 16px 18px;      
+  } 
+  &__link,
+  &__next{
+    height: 50px;
+    border: 1px solid $btn;
+    color: $title; 
+    transition: all .3s;
+    &:hover{
+      color: #fff;
+      background-color: $btn;
+    }
+  } 
+  &__list{
+    display: flex;
+  }   
+  .pagination__list{
+    padding-right: 8px;
+  }
+  &__item{
+    padding: 0 8px;
+  }
+  &__link--active{
+    color: #fff;
+    background-color: $btn;
+  }
+  
+}
+
