@@ -77,9 +77,23 @@ $(function () {
     $(this).addClass('pagination__link--active');
   });
 
+  $('.btn-description').on('click', function () {
+    $('.product-additionalinfo, .product-reviews').removeClass('product-tabs__item--active');
+    $('.product-description').addClass('product-tabs__item--active');
+  });
+  $('.btn-additionalinfo').on('click', function () {
+    $('.product-description, .product-reviews').removeClass('product-tabs__item--active');
+    $('.product-additionalinfo').addClass('product-tabs__item--active');
+  });
+  $('.btn-reviews').on('click', function () {
+    $('.product-description, .product-additionalinfo').removeClass('product-tabs__item--active');
+    $('.product-reviews').addClass('product-tabs__item--active');
+  });
+
+
   $('.select-style, .product-one__item-num').styler();
 
-  var mixer = mixitup('.categories__content, .now-design__content, .product-tabs__content'); 
+  var mixer = mixitup('.categories__content, .now-design__content'); 
   
   
     

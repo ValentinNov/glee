@@ -1321,8 +1321,8 @@
 .jq-number__spin{
   position: absolute;  
   cursor: pointer;
-  width: 48px;
-  height: 48px; 
+  width: 49px;
+  height: 49px; 
   border: transparent; 
   border-radius: 0;
   background: transparent;
@@ -1437,6 +1437,12 @@
       color: #fff;
       background-color: #a3bbc8;
     }
+  }
+  &__item{
+    display: none;
+  }
+  &__item--active{
+    display: block;
   }
 }
 
