@@ -99,8 +99,8 @@ $(function () {
 
   $('.select-style, .product-one__item-num').styler();
 
-  var mixer = mixitup('.categories__content, .now-design__content'); 
-  
+  var mixer = mixitup('.categories__content'); 
+  var mixer = mixitup('.now-design__content');
   
     
 });

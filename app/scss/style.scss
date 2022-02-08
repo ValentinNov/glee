@@ -61,14 +61,15 @@
 	transform: translateX(-20px) translateY(5px);
 	width: 110px;
 	background-color: #fff;
-	padding: 20px;
+	padding: 20px 20px 5px;
 	height: 0px;
 	overflow: hidden;
 	visibility: hidden;
 	transition: 0.2s ease-in-out;
 }
 .dropdown:hover .project{
-	height: 120px;	
+	height: auto;	
+  z-index: 10;
 	visibility: visible;
 }
 .dropdown .project .drop-item {
@@ -84,18 +85,26 @@
 
 .user-nav{
   display: flex;
-  align-items: center;
+  align-items: center;  
   &__link--search{
   padding: 17px;
   background-color: #edf1f4;
   border-radius: 50%;
   margin-right: 20px;
+  transition: all .3s;
+  &:hover{
+    background-color: #f8f8f8;
+  }
   } 
   &__link--heart,
   &__link--cart{
     position: relative;    
     height: 50px;
     background-color: $accent;
+    transition: all .3s;
+    &:hover{
+      background-color: #ebd4c1;
+    }
   } 
   &__link--heart{    
     padding: 18px 30px 12px 40px;    
@@ -138,6 +147,10 @@
     border-radius: 50%;
     background-color: $btn;
     margin-left: 20px;
+    transition: all .3s;
+    &:hover{
+      background-color: $default;
+    }
   }   
 }
 
@@ -219,6 +232,7 @@
     @extend %dmsans-400;
     color: #fff;
     padding: 15px;
+    transition: all .3s;
     &:hover{
       background-color: #234969;
       color: #fef7f0;
@@ -287,9 +301,13 @@
     padding: 25px 100px 24px 25px;
     background: $btn;
     color: #fff;
+    transition: all .3s;
     &::after{
       content: url('../images/arrows.svg');
-    }    
+    } 
+    &:hover{
+      background: $default;
+    }   
   }
   &__img{
     margin-top: 70px;;
@@ -397,6 +415,7 @@
     justify-content: space-between;
     font-size: 16px; 
     position: relative;
+    transition: all .3s;
     &:hover{
      .interaction{
        display: block;
@@ -586,6 +605,7 @@
     color: #436372;
     border-radius: 5px;
     padding: 20px 85px 20px 25px;
+    transition: all .3s;
     &::after{
       content: url('../images/arrows-black.svg');
       top: 24px;
@@ -674,7 +694,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }  
+    transition: all .3s;
+    grid-template-columns: repeat();
+  } 
+  &__popup:hover{
+    .circle__play{
+      fill: $default;
+      opacity: 0.6;
+    }
+    path{
+      fill: $default;
+    }
+  } 
 }
 
 .blog{
@@ -1523,6 +1554,208 @@
    right: 70px;
   }  
 }
+
+
+.blog-page{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    width: 830px;
+    margin-right: 70px;
+  }
+  &__aside{
+    width: 270px;
+  }
+  &__item{
+    margin-bottom: 50px;     
+  }
+  &__img-box{
+    position: relative;
+    margin-bottom: 35px;
+  }
+  &__title-link,
+  &__img-link{
+    display: block;
+    color: inherit;
+    font-family: inherit; 
+    font-size: inherit;    
+  }  
+  &__img{
+    max-width: 830px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+  }
+  &__item-box{
+    padding-right: 20px;
+  }
+  &__item-title{
+    color: $title;
+    @extend %dmsans-500;
+    font-size: 36px;
+    margin-bottom: 30px;    
+  }
+  &__item-text{
+    margin-bottom: 30px;
+  }
+  &__item-link{
+    display: block;
+    width: 180px;
+    color: $btn;
+    border: 1px solid $btn;
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    background-color: #fff;    
+    padding: 20px 80px 20px 20px;
+    transition: all .3s;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/blog-btn.svg');
+      top: 50%;
+      right: 20px;
+      width: 22px;
+      height: 9px;
+      transform: translateY(-5px);
+    }
+    &:hover{
+      background-color: #edf1f4;    
+    }
+  }
+
+  &__aside{
+    .filter-search,
+    .filter-category{
+      margin-bottom: 55px;
+    }
+    .filter__title{
+      margin-bottom: 20px;
+    }
+  }
+  .pagination-blog{
+    justify-content: start;
+    padding: 25px 0 0;
+    margin-left: -7px;
+  }   
+}
+
+.filter-search{  
+  &__form{
+    display: flex;
+    position: relative;
+  }
+  &__input{
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 60px 0 15px;
+    width: 270px;
+  }
+  &__btn{
+    position: absolute;
+    border: 1px solid #edf1f4;    
+    background-color: #edf1f4;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 40px;
+    width: 50px;
+    right: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+      border: 1px solid $btn;    
+      background-color: $btn;
+    }
+  }
+}
+
+.blog-box{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 275px;
+  height: 70px;
+  background-color: $btn;
+  color: #fff;
+  @extend %rubik-700;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 30px;
+  &__date,
+  &__autor{
+    padding-left: 23px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 6px;
+      background-image: url('../images/icons/calendar-wite.svg');
+    }
+  }
+   &__autor{
+    color: #fff;
+    &::before{ 
+      background-image: url('../images/icons/user-icon.svg');
+    }
+  }
+}
+
+.recent-post{    
+  &__item{
+    margin-bottom: 20px;
+    display: flex;    
+  }
+  &__img-link{
+    display: block;
+    margin-right: 20px;
+    min-width: 71px;
+  }
+  &__img{
+    width: 71px;
+    height: 71px;
+    object-fit: cover;
+  }
+  &__box{
+    padding-right: 5px;
+  }
+  &__title-link{
+    @extend %dmsans-400;
+    font-size: 14px;
+    color: $title;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  &__date{
+    color: #9a9a9a;
+    font-size: 12px;
+    line-height: 30px;
+    padding-left: 26px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+}
+
 
 
 
