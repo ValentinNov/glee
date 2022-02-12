@@ -38,6 +38,7 @@
   &__span-contact{
     text-transform: uppercase;
   }
+  &__title-form,
   &__title{
     color: #1f2044;
     @extend %dmsans-700;
@@ -46,6 +47,9 @@
     padding-top: 15px;
     margin-bottom: 20px;
     text-transform: uppercase;
+  }
+  &__title{
+    pointer-events: none;
   }
   &__link{
     margin-bottom: 14px;
@@ -83,7 +87,7 @@
   }
 }
 
-.fooer-bottom{
+.footer-bottom{
   height: 90px;
   display: flex;
   justify-content: space-between;
@@ -98,4 +102,100 @@
   &__link{
     color: #919191;
   }
+}
+
+@media (max-width: 1150px){
+  .footer-top{
+    &__item {
+      margin-right: 40px;
+    }  
+    &__contact{
+      width: 220px;
+    }
+  }
+}
+
+@media (max-width: 980px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 775px){
+  .footer-top{
+    &__contact{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__phone,
+    &__email{
+      width: 270px;
+    }
+  }  
+  .footer-menu__span {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 620px){
+  .footer-top{
+    &__list{
+     display: none;
+    }
+    &__title{
+      pointer-events: auto;
+      position: relative;
+      padding-right: 5px;
+      &::after{
+        position: absolute;
+        content: '';
+        top: 14px;
+        right: 90px;
+        width: 15px;
+        height: 20px;
+        background-image: url('../images/icons/angle.svg');
+        transform: rotate(0deg);
+      }    
+    } 
+    &__list--active{
+      &::after{      
+       transform: rotate(180deg);
+      }
+    } 
+  }   
+  .footer-bottom{
+    flex-direction: column;
+    &__copy{      
+      width: 100%;
+      margin-bottom: 15px;
+      text-align: center;
+    }    
+  }
+  .footer-menu{
+    justify-content: center;
+  } 
+}
+
+@media (max-width: 450px){
+  .footer-top{
+    &__nav{
+      margin-top: 30px;
+    }
+    &__form{
+      flex-wrap: wrap;
+    }
+    &__form-input{
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &__form-btn{
+      width: 100%;
+    }
+  }  
 }
