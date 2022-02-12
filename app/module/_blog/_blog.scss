@@ -1,0 +1,92 @@
+.blog{
+  padding: 115px 0 0;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+     @extend %dmsans-700;
+     margin-bottom: 45px;
+  }
+  &__title{
+    color: #191919;
+    font-size: 36px;   
+  }
+  &__link{
+    font-size: 16px;
+    color: #262626;
+    padding-right: 25px;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: url('../images/icons/arrows-blog.svg');
+      width: 8px;
+      height: 12px;
+      right: 0;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -195px;
+  }
+  &__item{
+    max-width: 370px;
+    background-color: #fff;
+  }
+  &__item-images{
+    height: 270px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &__item-link{
+    display: block;
+    max-width: 300px;
+    font-size: 18px;
+    color: #262626;
+    @extend %dmsans-500;
+    margin-left: 30px;
+    margin-bottom: 15px;    
+  }
+  &__item-inform{
+    border-top: 1px solid #e0e0e0;
+    max-width: 315px;
+    margin-left: 30px;
+    display: flex;
+    padding: 20px 0 20px 6px;
+  }
+  &__item-inform-data,
+  &__item-inform-autor{
+    color: #222933;
+    font-size: 12px;
+    line-height: 30px;
+    padding-left: 12px;
+    position: relative;
+    @extend %rubik-400;
+    &::before{
+      position: absolute;
+      content: '';
+      @extend %myriadpro-400;
+      left: 0;
+    }    
+  }
+  &__item-inform-autor{
+    margin-left: 28px;
+  }
+  &__item--news{
+    .blog__item-box{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: 'NEWS';
+        padding: 10px 30px 9px;
+        line-height: 1;
+        font-size: 14px;
+        color: #fff;
+        @extend %poppins-700;
+        background-color: $btn;
+        border-radius: 20px;
+        bottom: -16px;
+        left: 27px;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.accessories{
+  padding-top: 100px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    display: flex;
+    background-color: #feefe2;
+    padding: 95px 130px 0 140px;
+  }
+  &__item + .accessories__item{
+    margin-left: 30px;
+  }
+  &__img{
+    margin-top: -190px;
+    margin-bottom: 83px;
+  }
+  &__content{
+    margin-left: 20px;
+  }
+  &__content-rigth{
+    margin-left: 50px;
+  }
+  &__title{
+    font-size: 26px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    max-width: 265px;
+    margin-bottom: 25px;
+    line-height: 30px;
+  }
+  &__text{
+    max-width: 340px;
+    margin-bottom: 35px;
+  }
+  &__link{
+    background-color: #feefe2;
+    border: 1px solid #b3b7b5;
+    color: #436372;
+    border-radius: 5px;
+    padding: 20px 85px 20px 25px;
+    transition: all .3s;
+    &::after{
+      content: url('../images/arrows-black.svg');
+      top: 24px;
+    }
+    &:hover{
+      background-color: #fcd7b6;    
+    }
+  }
+}

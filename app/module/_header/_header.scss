@@ -1,0 +1,149 @@
+.header{
+  padding: 46px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  margin-left: 150px;
+  padding-bottom: 3px;
+  &__list{
+    display: flex;
+    font-size: 15px;
+    line-height: 12px;
+  }
+  &__list-item + .menu__list-item{
+    margin-left: 35px;
+  }
+  &__list-link{
+    color: #768a94;
+    transition: all .3s;
+    @extend %rubik-500;
+    &:hover{
+      color: $title;
+      border-bottom: 1px solid $btn;
+    }
+  }  
+}
+
+.dropdown {
+	position: relative;
+  font-size: 15px;
+  line-height: 12px;
+}
+.dropdown:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 7px;
+	height: 7px;
+	cursor: pointer;
+	transform: rotate(-45deg);
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	transition: 0.2s ease-in-out;
+}
+.dropdown:hover:after{
+	transform: rotate(75deg);
+}
+.dropdown .project {
+	position: absolute;
+	transform: translateX(-20px) translateY(5px);
+	width: 110px;
+	background-color: #fff;
+	padding: 20px 20px 5px;
+	height: 0px;
+	overflow: hidden;
+	visibility: hidden;
+	transition: 0.2s ease-in-out;
+}
+.dropdown:hover .project{
+	height: auto;	
+  z-index: 10;
+	visibility: visible;
+}
+.dropdown .project .drop-item {
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+.drop-item>a{ 
+  color: $default  
+}
+.drop-item>a:hover{
+  border-bottom: 1px solid $btn;
+}
+
+.user-nav{
+  display: flex;
+  align-items: center;  
+  &__link--search{
+  padding: 17px;
+  background-color: #edf1f4;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: all .3s;
+  &:hover{
+    background-color: #f8f8f8;
+  }
+  } 
+  &__link--heart,
+  &__link--cart{
+    position: relative;    
+    height: 50px;
+    background-color: $accent;
+    transition: all .3s;
+    &:hover{
+      background-color: #ebd4c1;
+    }
+  } 
+  &__link--heart{    
+    padding: 18px 30px 12px 40px;    
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+  &__link--cart{        
+    padding: 18px 40px 12px 30px;    
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }  
+  &__link--cart::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 32px;
+    background-color: #fde7d3;
+    left: 0;
+    top: 9px;
+  }
+  &__link-num{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 10px;
+    right: 20px;
+    font-size: 10px;
+    color: #436372;
+    background-color: #fff;
+    text-align: center;
+    line-height: 16px;
+    @extend %dmsans-400;
+  }
+  &__link--cart>.user-nav__link-num{
+    right: 30px;
+  } 
+  &__link--user{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: $btn;
+    margin-left: 20px;
+    transition: all .3s;
+    &:hover{
+      background-color: $default;
+    }
+  }   
+}

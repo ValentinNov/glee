@@ -1,0 +1,19 @@
+.video-fashion{
+  &__inner{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    grid-template-columns: repeat();
+  } 
+  &__popup:hover{
+    .circle__play{
+      fill: $default;
+      opacity: 0.6;
+    }
+    path{
+      fill: $default;
+    }
+  } 
+}
