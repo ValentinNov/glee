@@ -17,3 +17,19 @@
     }
   } 
 }
+
+@media (max-width: 980px){  
+  .video-fashion{
+    &__inner{
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 600px){  
+  .video-fashion{
+    &__inner{
+      height: 350px;
+    }
+  }
+}

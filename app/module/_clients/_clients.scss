@@ -18,3 +18,32 @@
     margin-top: 0;
   }
 }
+
+@media (max-width: 860px){
+  .clients{
+    &__links{
+      height: 250px;
+      flex-wrap: wrap;
+    }  
+    &__item{
+      margin-bottom: 20px;
+      margin-top: 0;
+      width: 30%;
+
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .clients{ 
+    padding-top: 10px;
+     &__links{      
+      height: 330px;
+      flex-wrap: wrap;
+    } 
+    &__item{
+
+      width: 45%;
+    }
+  }
+}
