@@ -42,8 +42,10 @@
       flex-wrap: wrap;
     } 
     &__item{
-
       width: 45%;
-    }
+    }    
   }
+  .clients--modified .clients__links {
+    height: 300px;
+}
 }

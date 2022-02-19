@@ -96,6 +96,7 @@
     color: $default;
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: center;
   }
   &__item-price{
     @extend %dmsans-700;
@@ -114,7 +115,7 @@
     text-align: left;
     box-shadow: none;
     padding-left: 30px;
-    margin: 0 5px 40px o;
+    margin: 0 5px 40px 0;
     .categories__wrap-img{
       display: flex;      
       width: 350px; 

@@ -1,0 +1,25 @@
+.personal-inform{
+  padding-top: 50px;
+  &__title{
+    @extend %rubik-500;
+    color: $default;
+    font-size: 24px;
+    margin: 70px 0 20px;
+  }
+  &__lists{
+    margin-left: 30px;
+    list-style-type: decimal-leading-zero;
+  }
+  &__list{
+    margin-bottom: 30px;
+  }
+}
+
+
+@media (max-width: 1100px){  
+  .personal-inform{
+    &__title{
+      margin: 10px 0;
+    }
+  }
+}

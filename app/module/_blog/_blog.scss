@@ -12,6 +12,7 @@
   }
   &__link{
     font-size: 16px;
+    margin-top: 15px;
     color: #262626;
     padding-right: 25px;
     position: relative;
@@ -93,12 +94,16 @@
 
 @media (max-width: 1260px){  
   .blog{
+    padding: 60px 0;
     &__item + .blog__item{
       margin-left: 10px;
     }
     &__item-link{
       font-size: 16px;
       margin-left: 20px;
+    }
+    &__items{
+      margin-bottom: -252px;
     }
   }
 }
@@ -131,8 +136,30 @@
   }
 }
 
+@media (max-width: 600px){
+  .blog{
+    &__title{
+      font-size: 22px;
+      line-height: 25px;
+    }
+    &__link{
+      padding-right: 15px;
+      margin-top: 0;
+    }
+  }
+}
+
 @media (max-width: 450px){  
-  .blog{   
+  .blog{  
+    &__top{
+      flex-direction: column;
+      margin-bottom: 10px;
+    } 
+    &__link{
+      text-align: right;
+      padding-right: 15px;
+      margin-top: 15px;
+    }
     &__item-link{
       font-size: 16px;
       margin-left: 10px;
